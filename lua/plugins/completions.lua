@@ -32,8 +32,8 @@ return {
           ["<C-e>"] = cmp.mapping.abort(),
 
           -- Confirmar autocompletado linea comentada para confirmar con Enter
-          -- ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+          -- ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
