@@ -11,6 +11,8 @@ return {
         null_ls.builtins.formatting.clang_format,
         null_ls.builtins.formatting.pretty_php,
         null_ls.builtins.formatting.black,
+        -- rust-analyzer ya tiene una funcion de formateo integrada
+        -- no es necesario añadirla aquí
       },
     })
 
