@@ -9,9 +9,11 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
-		opts = {
-			auto_install = true,
-		},
+		config = function()
+			require("mason-lspconfig").setup({
+        ensure_installed = {"tsserver","html","lua_ls","clangd","cmake","cssls","pylsp","intelephense","rust_analyzer"},
+			})
+		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -21,7 +23,7 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			-- Instalar lsp con :Mason y añadirlos a este archivo
+			-- Instalar nuevos lsp con :Mason y añadirlos a este archivo
 			-- reemplazar "_" por "-"
 
 			lspconfig.tsserver.setup({
