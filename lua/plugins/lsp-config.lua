@@ -50,7 +50,7 @@ return {
 			})
 			lspconfig.rust_analyzer.setup({
 				cmd = { "rust-analyzer" },
-				filetypes = { "rust", "toml" },
+				filetypes = { "rust" },
 				root_dir = lspconfig.util.root_pattern("Cargo.toml", ".git"),
 				capabilities = capabilities,
 				settings = {
