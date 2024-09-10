@@ -11,7 +11,17 @@ return {
 		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup({
-        ensure_installed = {"tsserver","html","lua_ls","clangd","cmake","cssls","pylsp","intelephense","rust_analyzer"},
+				ensure_installed = {
+					"ts_ls",
+					"html",
+					"lua_ls",
+					"clangd",
+					"cmake",
+					"cssls",
+					"pylsp",
+					"intelephense",
+					"rust_analyzer",
+				},
 			})
 		end,
 	},
@@ -26,7 +36,7 @@ return {
 			-- Instalar nuevos lsp con :Mason y añadirlos a este archivo
 			-- reemplazar "_" por "-"
 
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.html.setup({

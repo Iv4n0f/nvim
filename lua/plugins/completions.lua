@@ -38,9 +38,33 @@ return {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "luasnip" },
+          { name = "crates" },
         }, {
           { name = "buffer" },
         }),
+      })
+    end,
+  },
+  -- Herramienta de crates para rust
+  {
+    "saecki/crates.nvim",
+    tag = "stable",
+    config = function()
+      require("crates").setup({
+        completion = {
+          cmp = {
+            enabled = true,
+          },
+          crates = {
+            enabled = true,
+            max_results = 8,
+            min_chars = 3,
+          },
+        },
+        null_ls = {
+          enabled = true,
+          name = "crates.nvim",
+        },
       })
     end,
   },
