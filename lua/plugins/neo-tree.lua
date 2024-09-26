@@ -8,9 +8,8 @@ return {
   },
 
   config = function()
-    --Ctrl+b abre y cierra el arbol de archivos
-    vim.keymap.set("n", "<C-b>", ":Neotree toggle<CR>", {}) -- ancho de ventana
-    vim.keymap.set("i", "<C-b>", "<Esc>:Neotree toggle<CR>i", {})
+    -- leader(espacio) + b abre y cierra el arbol de archivos
+    vim.keymap.set("n", "<leader>b", ":Neotree toggle<CR>", {})
 
     require("neo-tree").setup({
       window = {
