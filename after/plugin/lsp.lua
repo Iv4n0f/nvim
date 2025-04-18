@@ -32,6 +32,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
+-- LSPs
 require('lspconfig').clangd.setup({})
 require('lspconfig').lua_ls.setup({})
 
