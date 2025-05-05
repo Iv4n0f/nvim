@@ -33,6 +33,10 @@ vim.g.clipboard = {
   },
 }
 
+vim.cmd [[
+  cnoreabbrev <expr> man getcmdtype() == ':' && getcmdline() ==# 'man' ? 'Man' : 'man'
+]]
+
 vim.diagnostic.config({
   virtual_text = {
     spacing = 2,
