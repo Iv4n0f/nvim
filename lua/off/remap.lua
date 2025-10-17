@@ -12,6 +12,9 @@ vim.opt.scrolloff = 7
 vim.g.mapleader = " "
 vim.opt.mouse = ""
 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("i", "{{", "{<CR>}<Esc>O", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })
